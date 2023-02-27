@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Search</title>
+    <div style="position: absolute; top: 20px; right: 20px;">
+        <a href="images.html">Image Search</a>
+        <a href="advanced.html">Advanced Search</a>
+    </div>
+    <style>
+        /* Google font family and font size */
+        body {
+            font-family: "Google Sans", sans-serif;
+            font-size: 16px;
+        }
+        
+        /* Google color scheme */
+        a {
+            color: #1a73e8;
+        }
+        
+        button {
+            background-color: #1a73e8;
+            color: #fff;
+        }
+        
+        /* Page background */
+        body {
+            background-color: #f1f3f4;
+        }
+        
+        /* Google logo */
+        .logo {
+            background-image: url("https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 92px;
+            width: 272px;
+            margin: 20px auto;
+        }
+        
+        /* Search form */
+        form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+            width: 50%;
+            max-width: 500px;
+            background-color: #fff;
+            border-radius: 14px;
+            padding: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        
+        input[type="text"] {
+            flex-grow: 1;
+            border: none;
+            font-size: 18px;
+            padding: 10px;
+            margin-right: 10px;
+        }
+        
+        button[type="submit"] {
+            padding: 10px 16px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            background-image: url("https://www.google.com/images/icons/material/system/1x/search_black_24dp.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #fff;
+            box-shadow: 0 1px 6px rgba(32,33,36,0.28);
+            transition: box-shadow 0.45s;
+        }
+        
+        button[type="submit"]:hover {
+            box-shadow: 0 3px 12px rgba(32,33,36,0.15);
+        }
+    </style>
+</head>
+<body>
+    <div class="logo"></div>
+<form action="https://www.google.com/search">
+  <input type="text" name="q">
+  <input type="submit" value="Google Search">
+  <input type="button" value="I'm Feeling Lucky" onclick="window.location.href='https://www.google.com/search?q=' + document.getElementsByName('q')[0].value">
+</form>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="position: absolute; top: 20px; right: 20px;">
+        <a href="index.html">Google Search</a>
+
+        <a href="advanced.html">Advanced Search</a>
+    </div>
+    </div>
+    <style>
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 20px;
+      }
+      
+      label {
+        font-weight: bold;
+      }
+      
+      input[type="text"] {
+        margin: 5px 0;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        width: 500px;
+        max-width: 100%;
+      }
+      
+      button[type="submit"] {
+        margin: 20px 0;
+        padding: 10px 20px;
+        background-color: #4285f4;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      
+      button[type="submit"]:hover {
+        background-color: #3367d6;
+      }
+    </style>
+    <form action="https://www.google.com/search" method="GET">
+        <input type="text" name="as_q">
+        <div>
+          <input type="checkbox" name="as_epq">
+          <label>Exact phrase</label>
+        </div>
+        <div>
+          <input type="checkbox" name="as_oq">
+          <label>Any of these words</label>
+        </div>
+        <div>
+          <input type="checkbox" name="as_eq">
+          <label>None of these words</label>
+        </div>
+        <div>
+          <label>All these words:</label>
+          <input type="text" name="as_q" required>
+        </div>
+        <button type="submit">Google Search</button>
+      </form>
+      
+</body>
+</html>
